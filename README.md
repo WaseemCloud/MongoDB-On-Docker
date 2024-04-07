@@ -105,7 +105,13 @@ In this tutorial, I will be demonstrating how to build two containers. One for t
   ![image](https://github.com/WaseemCloud/MongoDB-Docker/assets/157589909/955834b6-35de-4a70-a6a3-9bb3bd145ec3)
   
 
+-------------------
+# 9) Connect to MongoDB Shell:
+-------------------
 
+- To access the Shell of the mongo db container:
+  
+      docker exec -it mongo sh
 
 -------------------
 # Stopping the containers:
