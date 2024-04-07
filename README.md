@@ -59,7 +59,7 @@ In this tutorial, I will be demonstrating how to build two containers. One for t
 
     docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongo --network mongo-network mongo
 
-- Instead of using only run command in a single line, you can make the command more readable by using "\" at the end of each entry.
+- Instead of using only run command in a single line, you can make the command more readable by using " \ " at the end of each entry.
 
 - we are specifying our listening port to be "27017" for both the container and our machine.
 
@@ -92,6 +92,20 @@ In this tutorial, I will be demonstrating how to build two containers. One for t
 -------------------
 
     docker ps -a
+
+![image](https://github.com/WaseemCloud/MongoDB-Docker/assets/157589909/6b9b0b59-5695-48c2-9261-83a29d66f16c)
+
+-------------------
+# 8) Connect to MongoDB Express:
+-------------------
+
+- You should be able to connect to your MongoDB-Express by accessing the following URL:
+  http://localhost:8081/
+
+  ![image](https://github.com/WaseemCloud/MongoDB-Docker/assets/157589909/955834b6-35de-4a70-a6a3-9bb3bd145ec3)
+  
+
+
 
 -------------------
 # Stopping the containers:
@@ -147,3 +161,11 @@ Container "mongo-express":
 - Instead, you may delete both container images in one command:
 
       docker rmi mongo mongo-express
+
+-------------------
+# Deleting Docker Network:
+-------------------
+
+    docker network rm mongo-network
+
+    
