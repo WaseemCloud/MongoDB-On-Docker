@@ -88,6 +88,12 @@ In this tutorial, I will be demonstrating how to build two containers. One for t
 
 
 -------------------
+# 7) Verify that both containers are created:
+-------------------
+
+    docker ps -a
+
+-------------------
 # Stopping the containers:
 -------------------
 
