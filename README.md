@@ -4,37 +4,35 @@
 ![kisspng-docker-application-software-software-deployment-mi-docker-5ba331e62a2ce0 4850087515374217981728-removebg-preview](https://github.com/WaseemCloud/Dynamic-web-page---Docker/assets/157589909/7ad105da-5471-499e-9e21-e8bd93247787)
 
 
-In this tutorial, I will be demonstrating how to build two containers. One for Wordpress, and the second is mysql, as Wordpress needs to have a Database as a dependency. Instead of building these containers individually, we will be deploying them using Docker Compose. Docker Compose files are used to run several containers with all their necessary configurations at once. You can also, specify the docker network that you wish to run your containers in.
+In this tutorial, I will be demonstrating how to build two containers. One for the MongoDB database, and the second for building Mongo-Express, which is the GUI version to facilitate accessing the MongoDB through a web interface.
 
 -------------------
 
 -------------------
-# 1) Creating Docker Compose file:
+# 1) Pulling MongoDB Docker image:
 -------------------
 
-![image](https://github.com/WaseemCloud/MongoDB-On-Docker/assets/157589909/1eefab69-1b94-4743-a44e-479ddaa5fb12)
+- let's pull the image of MongoDB from DockerHub:
 
-- This file can be found in the repository "wordpress-services.yaml".
+      docker pull mongo
 
 -------------------
-# 2) Running the Docker Compose File:
+# 2) Pulling MongoDB-Express Docker image:
 -------------------
 
 - let's also pull the image of MongoDB-Express from DockerHub:
 
-      docker-compose -f  wordpress-services.yaml up
+      docker pull mongo-express
 
 
 -------------------
-# 3) Verify containers:
+# 3) Verify that both images have been successfully pulled:
 -------------------
 
-- Verify that both container "Wordpress" and "MySQL" have been successfully deployed and running perfectly fine:
-
-      docker ps
+      docker images
 
 
-![image](https://github.com/WaseemCloud/MongoDB-On-Docker/assets/157589909/095a1607-79b1-4020-bbd3-144c3969cd16)
+![image](https://github.com/WaseemCloud/MongoDB-On-Docker/assets/157589909/17781578-a055-4248-aafc-4f0ea034f45b)
 
 
 -------------------
